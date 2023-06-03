@@ -3,12 +3,14 @@ package com.khiemtran.redis_demo_spring_boot.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.khiemtran.redis_demo_spring_boot.model.User;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class UserDto {
 	@JsonProperty("id")
 	private String id;

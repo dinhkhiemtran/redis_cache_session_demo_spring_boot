@@ -9,5 +9,5 @@ public interface UserRedisService {
 
 	List<User> getAll();
 
-	String deleteUserRedis(String id);
+	void deleteUserRedis(String id);
 }

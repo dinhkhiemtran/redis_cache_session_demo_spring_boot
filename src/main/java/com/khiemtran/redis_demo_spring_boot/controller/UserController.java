@@ -33,7 +33,7 @@ public class UserController {
 
 	@DeleteMapping("user/{id}")
 	public ResponseEntity<?> deleteUser(@PathVariable(name = "id") String id) {
-		String str = redisService.deleteUserRedis(id);
-		return ResponseEntity.ok().body(str);
+		redisService.deleteUserRedis(id);
+		return ResponseEntity.ok().body("Successfully.");
 	}
 }

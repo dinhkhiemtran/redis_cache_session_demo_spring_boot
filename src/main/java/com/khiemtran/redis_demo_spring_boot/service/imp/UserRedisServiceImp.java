@@ -37,8 +37,7 @@ public class UserRedisServiceImp implements UserRedisService {
 
 	@Override
 	@CacheEvict("user")
-	public String deleteUserRedis(String id) {
+	public void deleteUserRedis(String id) {
 		redisTemplate.opsForHash().delete(httpSession.getId(), id);
-		return "Deleted successfully.";
 	}
 }
